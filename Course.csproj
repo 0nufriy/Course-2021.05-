@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94E291BF-783E-4D78-B4BF-E0C450FB06C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Course</RootNamespace>
+    <AssemblyName>Course</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2071845.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="View\SelectPlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SelectPlayList.Designer.cs">
+      <DependentUpon>SelectPlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditPlayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditPlayList.Designer.cs">
+      <DependentUpon>EditPlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\NewPlaylist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewPlaylist.Designer.cs">
+      <DependentUpon>NewPlaylist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayListEl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PlayListEl.Designer.cs">
+      <DependentUpon>PlayListEl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddToListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddToListForm.Designer.cs">
+      <DependentUpon>AddToListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Album.cs" />
+    <Compile Include="Controller\AllList.cs" />
+    <Compile Include="Model\Artist.cs" />
+    <Compile Include="View\FavoriteEl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\FavoriteEl.Designer.cs">
+      <DependentUpon>FavoriteEl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FavoriteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FavoriteList.Designer.cs">
+      <DependentUpon>FavoriteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\JSOMElement.cs" />
+    <Compile Include="Model\JsonSave.cs" />
+    <Compile Include="View\ListAllMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListAllMusic.Designer.cs">
+      <DependentUpon>ListAllMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Music.cs" />
+    <Compile Include="View\MusicEl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MusicEl.Designer.cs">
+      <DependentUpon>MusicEl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\MyFavoriteList.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\SelectPlayList.resx">
+      <DependentUpon>SelectPlayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditPlayList.resx">
+      <DependentUpon>EditPlayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\NewPlaylist.resx">
+      <DependentUpon>NewPlaylist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PlayListEl.resx">
+      <DependentUpon>PlayListEl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddToListForm.resx">
+      <DependentUpon>AddToListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FavoriteEl.resx">
+      <DependentUpon>FavoriteEl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FavoriteList.resx">
+      <DependentUpon>FavoriteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListAllMusic.resx">
+      <DependentUpon>ListAllMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MusicEl.resx">
+      <DependentUpon>MusicEl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2071845.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
